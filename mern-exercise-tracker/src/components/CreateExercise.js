@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
@@ -10,9 +11,23 @@ const CreateExercise = (props) => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    setUsers(['test user', 'test user 2']);
-    setUsername('test user');
+    const getDataUsers = async () => {
+      await axios.get('http://localhost:5000/users').then((res) => {
+        if (res.data) {
+          console.log(res.data[0].username);
+          setUsers(res.data.map((user) => user.username));
+          setUsername(res.data[0].username);
+        }
+      });
+    };
+    getDataUsers();
   }, []);
+
+  useEffect(() => {
+    if (users[0]) {
+      setUsername(users[0].username);
+    }
+  }, [users]);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -23,6 +38,9 @@ const CreateExercise = (props) => {
       date,
     };
     console.log(exercise);
+    axios
+      .post('http://localhost:5000/exercises/add', exercise)
+      .then((res) => console.log(res.data));
     props.history.push('/');
   };
   return (
@@ -67,10 +85,7 @@ const CreateExercise = (props) => {
           </div>
           <div className="form-group">
             <label>Date: </label>
-            <DatePicker
-              selected={date}
-              onChange={(e) => setDate(e.target.value)}
-            />
+            <DatePicker selected={date} onChange={(e) => setDate(e)} />
           </div>
           <div className="form-group">
             <input
