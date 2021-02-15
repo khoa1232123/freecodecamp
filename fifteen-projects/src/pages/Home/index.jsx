@@ -26,6 +26,11 @@ const Home = () => {
             <Link to="/accordion">Accordion</Link>
           </Card.Body>
         </Card>
+        <Card>
+          <Card.Body>
+            <Link to="/colorgenerator">Color Generator</Link>
+          </Card.Body>
+        </Card>
       </div>
     </main>
   );

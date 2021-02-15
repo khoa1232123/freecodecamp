@@ -1,6 +1,7 @@
 import {
   AccordionQuestion,
   BirthdayReminder,
+  ColorGenerator,
   Home,
   Reviewers,
   ReviewTours,
@@ -17,6 +18,7 @@ function App() {
         <Route path="/tour" component={ReviewTours} />
         <Route path="/review" component={Reviewers} />
         <Route path="/accordion" component={AccordionQuestion} />
+        <Route path="/colorgenerator" component={ColorGenerator} />
       </Switch>
     </Router>
   );

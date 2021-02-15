@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './styles.scss';
 import data from '../../api/questionData';
-import { Accordion, Button, Card, Col, Row } from 'react-bootstrap';
+import { Accordion, Card, Col, Row } from 'react-bootstrap';
 
 const AccordionQuestion = () => {
-  const [index, setIndex] = useState(0);
   return (
     <div className="container">
       <div className="title">
