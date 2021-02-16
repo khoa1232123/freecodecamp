@@ -4,13 +4,15 @@ import './styles.scss';
 
 const Reviewers = () => {
   return (
-    <main>
-      <div className="title">
-        <h2>Our reviews</h2>
-        <div className="underline"></div>
-      </div>
-      <Review />
-    </main>
+    <div className="reviewers">
+      <main>
+        <div className="title">
+          <h2>Our reviews</h2>
+          <div className="underline"></div>
+        </div>
+        <Review />
+      </main>
+    </div>
   );
 };
 

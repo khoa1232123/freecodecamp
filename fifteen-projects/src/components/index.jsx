@@ -4,3 +4,6 @@ export { default as Tours } from './Tours';
 export { default as Review } from './Review';
 export { default as Question } from './Question';
 export { default as Header } from './Header';
+export { default as CTNavbar } from './Cocktail/Navbar';
+export { default as CTSearchForm } from './Cocktail/SearchForm';
+export { default as CocktailList } from './Cocktail/CocktailList';

@@ -28,7 +28,12 @@ const Home = () => {
         </Card>
         <Card>
           <Card.Body>
-            <Link to="/colorgenerator">Color Generator</Link>
+            <Link to="/colorgenerator">Color Random</Link>
+          </Card.Body>
+        </Card>
+        <Card>
+          <Card.Body>
+            <Link to="/cocktail">cocktail</Link>
           </Card.Body>
         </Card>
       </div>

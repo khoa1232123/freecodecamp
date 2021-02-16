@@ -30,9 +30,11 @@ const ReviewTours = () => {
     );
   }
   return (
-    <main>
-      <Tours tours={tours} deleteTour={deleteTour} />
-    </main>
+    <div className="reviewtour">
+      <main>
+        <Tours tours={tours} deleteTour={deleteTour} />
+      </main>
+    </div>
   );
 };
 

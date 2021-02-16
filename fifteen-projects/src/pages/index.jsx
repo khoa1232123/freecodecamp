@@ -4,3 +4,7 @@ export { default as ReviewTours } from './ReviewTours';
 export { default as Reviewers } from './Reviewers';
 export { default as AccordionQuestion } from './AccordionQuestion';
 export { default as ColorGenerator } from './ColorGenerator';
+export { default as CocktailPage } from './CocktailPage';
+export { default as CTAbout } from './CocktailPage/About';
+export { default as CTError } from './CocktailPage/Error';
+export { default as SingleCocktail } from './CocktailPage/SingleCocktail';
